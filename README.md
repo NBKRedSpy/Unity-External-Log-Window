@@ -2,7 +2,9 @@
 
 ![Log Example](./media/LogExample.png)
 
-Outputs a Unity game's log to an external console window.  This is similar to BepInEx's console window.
+Outputs the Unity log to an external window.  This does not affect the normal logging.
+
+This is similar to BepInEx's console window.
 
 # Usage
 Add the code below to add the console to Unity's logging system.
