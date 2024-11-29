@@ -2,7 +2,7 @@
 
 ![Log Example](./media/LogExample.png)
 
-Outputs the Unity log to an external window.  This does not affect the normal logging.
+Outputs the Unity log to an external window.  The output is colored by log type and does not affect the normal logging.
 
 This is similar to BepInEx's console window.
 
