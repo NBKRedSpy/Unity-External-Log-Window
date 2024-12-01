@@ -11,7 +11,7 @@ namespace UnityExternalLogWindow
     /// <summary>
     /// A Unity log handler that can write colored output to the console.
     /// </summary>
-    public class ColoredLog : ILogHandler
+    internal class ColoredLog : ILogHandler
     {
         private ILogHandler m_DefaultLogHandler = Debug.unityLogger.logHandler;
 

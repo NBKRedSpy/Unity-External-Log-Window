@@ -16,7 +16,7 @@ namespace UnityExternalLogWindow
     /// This code is from StackOverflow user wischi:
     /// https://stackoverflow.com/a/45282476/20226690
     /// </remarks>
-    public static class ConsoleUtility
+    internal static class ConsoleUtility
     {
         [DllImport("kernel32.dll",
             EntryPoint = "AllocConsole",
@@ -40,8 +40,15 @@ namespace UnityExternalLogWindow
         private const uint FILE_SHARE_WRITE = 0x2;
         private const uint OPEN_EXISTING = 0x3;
 
+        private static bool _inited = false;
         public static void CreateConsole()
         {
+            //Only using this library to attach to the default console, 
+            //  so only init once.  Avoids needing to clean up handles.
+            if (_inited) return;
+
+            _inited = true;
+
             AllocConsole();
 
             IntPtr stdHandle = CreateFile(

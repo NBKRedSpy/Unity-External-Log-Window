@@ -8,7 +8,7 @@ Outputs a Unity game's log to an external console window.  This is similar to Be
 Add the code below to add the console to Unity's logging system.
 
 ```csharp
-    Debug.unityLogger.logHandler = new ColoredLog();
+    UnityExternalLogWindow.ExternalLog.Attach();
 ```
 # Notes
 
